@@ -16,7 +16,7 @@
         "ec2:RunInstances"
       ],
       "Resource": [
-        "arn:aws:ec2:${region_name}:${aws_account}:instance/*"
+        "arn:aws:ec2:${aws_region}:${aws_account_number}:instance/*"
       ],
       "Condition": {
         "StringEquals": {
@@ -35,12 +35,12 @@
         "ec2:RunInstances"
       ],
       "Resource": [
-        "arn:aws:ec2:${region_name}:${aws_account}:key-pair/*",
-        "arn:aws:ec2:${region_name}:${aws_account}:network-interface/*",
-        "arn:aws:ec2:${region_name}:${aws_account}:security-group/*",
-        "arn:aws:ec2:${region_name}:${aws_account}:subnet/*",
-        "arn:aws:ec2:${region_name}:${aws_account}:volume/*",
-        "arn:aws:ec2:${region_name}::image/ami-*"
+        "arn:aws:ec2:${aws_region}:${aws_account_number}:key-pair/*",
+        "arn:aws:ec2:${aws_region}:${aws_account_number}:network-interface/*",
+        "arn:aws:ec2:${aws_region}:${aws_account_number}:security-group/*",
+        "arn:aws:ec2:${aws_region}:${aws_account_number}:subnet/*",
+        "arn:aws:ec2:${aws_region}:${aws_account_number}:volume/*",
+        "arn:aws:ec2:${aws_region}::image/ami-*"
       ]
     },
     {
@@ -51,7 +51,7 @@
         "ec2:StopInstances",
         "ec2:StartInstances"
       ],
-      "Resource": "arn:aws:ec2:${region_name}:${aws_account}:instance/*"
+      "Resource": "arn:aws:ec2:${aws_region}:${aws_account_number}:instance/*"
     }
   ]
 }
