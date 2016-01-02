@@ -15,3 +15,11 @@ output "duplicity.unique_id" {
 output "duplicity.arn" {
   value = "${aws_iam_user.duplicity.arn}"
 }
+
+output "ec2.unique_id" {
+  value = "${aws_iam_user.ec2.unique_id}"
+}
+
+output "ec2.arn" {
+  value = "${aws_iam_user.ec2.arn}"
+}
