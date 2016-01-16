@@ -19,5 +19,9 @@ variable "stack" {
 }
 
 variable "s3_duplicity_bucket" {
-  default = "duplicity"
+  default = "wicksy-macbook-pro"
+}
+
+variable "s3_media_bucket" {
+  default = "wicksy-media"
 }

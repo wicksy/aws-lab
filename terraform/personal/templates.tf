@@ -19,3 +19,9 @@ resource "template_file" "sts_allow_decode" {
   template = "templates/sts_allow_decode.tpl"
 }
 
+resource "template_file" "s3_media_bucket" {
+  template = "templates/s3_media_bucket.tpl"
+  vars {
+    bucket_name = "${var.s3_media_bucket}"
+  }
+}
