@@ -39,12 +39,6 @@
         "arn:aws:s3:::${bucket_name}",
         "arn:aws:s3:::${bucket_name}/*"
       ]
-    },
-    {
-      "Sid": "AllowListBucketAction",
-      "Effect": "Allow",
-      "Action": "s3:ListAllMyBuckets",
-      "Resource": "arn:aws:s3:::*"
     }
   ]
 }
