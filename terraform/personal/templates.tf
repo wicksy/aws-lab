@@ -25,3 +25,18 @@ resource "template_file" "s3_media_bucket" {
     bucket_name = "${var.s3_media_bucket}"
   }
 }
+
+resource "template_file" "s3_duplicity_sse" {
+  template = "templates/s3_enforce_sse_policy.tpl"
+  vars {
+    bucket_name = "${var.s3_duplicity_bucket}"
+  }
+}
+
+resource "template_file" "s3_media_sse" {
+  template = "templates/s3_enforce_sse_policy.tpl"
+  vars {
+    bucket_name = "${var.s3_media_bucket}"
+  }
+}
+
