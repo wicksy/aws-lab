@@ -12,6 +12,11 @@ resource "aws_iam_user" "media" {
   name = "media"
 }
 
+resource "aws_iam_user" "wicksycv" {
+  provider = "aws.ireland"
+  name = "wicksycv"
+}
+
 resource "aws_iam_user" "ec2" {
   provider = "aws.ireland"
   name = "ec2"
@@ -43,5 +48,12 @@ resource "aws_iam_user_policy" "media" {
   name = "AllowFullMediaBucket"
   user = "${aws_iam_user.media.name}"
   policy = "${template_file.s3_media_bucket.rendered}"
+}
+
+resource "aws_iam_user_policy" "wicksycv" {
+  provider = "aws.ireland"
+  name = "AllowFullWicksyCVBucket"
+  user = "${aws_iam_user.wicksycv.name}"
+  policy = "${template_file.s3_wicksycv_bucket.rendered}"
 }
 
