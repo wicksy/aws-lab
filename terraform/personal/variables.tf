@@ -15,7 +15,7 @@ variable "aws_frankfurt_region" {
 }
 
 variable "stack" {
-  default = "wicksy"
+  default = "S3IAMPoliciesAndUsers"
 }
 
 variable "s3_duplicity_bucket" {
@@ -24,4 +24,8 @@ variable "s3_duplicity_bucket" {
 
 variable "s3_media_bucket" {
   default = "wicksy-media"
+}
+
+variable "s3_wicksycv_bucket" {
+  default = "wicksy-cv"
 }
